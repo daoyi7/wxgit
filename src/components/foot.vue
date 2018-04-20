@@ -9,7 +9,6 @@
     <div class="item">
       <a href="/pages/counter/main" class="profile">Profile</a>
     </div>
-    <!-- <h2>{{title}}</h2> -->
   </div>
 </template>
 <script>
@@ -22,6 +21,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
 }
 .item {
   flex: 1;
@@ -30,6 +30,7 @@ export default {
 }
 .item a {
   font-size: 20rpx;
+  color: rgba(27,31,35,0.8);
 }
 </style>
 

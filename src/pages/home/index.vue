@@ -11,6 +11,7 @@
 
 <script>
 import gitFoot from "@/components/foot";
+
 export default {
   components: {
     gitFoot
@@ -24,6 +25,6 @@ export default {
 }
 .git-foot {
   flex: 0 0 80rpx;
-  border-top: .11rpx solid #24292e;
+  border-top: 1rpx solid rgba(27,31,35,0.2);
 }
 </style>
