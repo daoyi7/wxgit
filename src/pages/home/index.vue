@@ -1,30 +1,45 @@
 <template>
   <div class="container">
     <div class="main">
-      3232
-    </div>
-    <div class="git-foot">
-      <git-foot></git-foot>
+      <input v-model="keyword" @bindconfirm="search" placeholder="你想搜点啥？" />
     </div>
   </div>
 </template>
 
 <script>
-import gitFoot from "@/components/foot";
-
 export default {
-  components: {
-    gitFoot
+  data() {
+    return {
+      keyword: ""
+    };
+  },
+  method: {
+    input(e) {
+      this.keyword = e.detail.value
+      console.log(e.datail.value)
+    },
+    search() {
+      console.log(222)
+    }
+  },
+  watch: {
+    keyword(val, newVal) {
+      console.log(value, newValue)
+    }
   }
 };
 </script>
 
 <style scoped>
 .main {
-  flex: 1;
+  padding: 40px;
+  height: 100%;
 }
-.git-foot {
-  flex: 0 0 80rpx;
-  border-top: 1rpx solid rgba(27,31,35,0.2);
+input {
+  display: block;
+  border: 1rpx solid rgba(27, 31, 35, 0.8);
+  height: 35rpx;
+  padding: 8rpx;
+  color: rgba(27, 31, 35, 0.8);
 }
 </style>
